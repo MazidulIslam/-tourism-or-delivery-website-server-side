@@ -54,6 +54,13 @@ async function run() {
       const order = await orderCollections.findOne(query);
       res.json(order);
     });
+    // GET ALL Images
+    app.get("/gallery", async (req, res) => {
+      console.log(req.body);
+      const cursor = imageCollections.find({});
+      const image = await cursor.toArray();
+      res.send(image);
+    });
     // POST  API
     app.post("/offers", async (req, res) => {
       const offer = req.body;
