@@ -89,7 +89,7 @@ app.get("/places", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World from explore Wonderland!");
+  res.send("Hello World from explore Wonderland Server!");
 });
 
 app.listen(port, () => {
